@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИгроМания — новости, обзоры и моды игр</title>
+    <meta name="description" content="ИгроМания — сайт с игровыми новостями, обзорами игр, модами и стратегиями.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+    <div class="header-left">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="ИгроМания" class="logo-img">
+        </a>
+    </div>
+
+    <div class="header-center">
+        <div class="auth-box">
+            <input type="text" placeholder="Логин" class="auth-input">
+            <input type="password" placeholder="Пароль" class="auth-input">
+            <button class="auth-btn">Вход</button>
+            <a href="#" class="reg-link">Регистрация</a>
+        </div>
+    </div>
+    
+    <div class="header-right">
+        <nav class="nav">
+            <a href="index.html" class="nav-link active">Обзоры игр</a>
+            <a href="mods.html" class="nav-link">Моды</a>
+            <a href="guides.html" class="nav-link">Стратегии</a>
+        </nav>
+        <button class="menu-toggle">&#9776;</button>
+    </div>
+</header>
+
+       <!-- Мобильное меню -->
+<div class="mobile-sidebar" style="display: none;">
+    <div class="news-tabs">
+        <button id="newBtnMobile" class="tab active">Новые</button>
+        <button class="close-mobile-sidebar">&#10005;</button> 
+        <button id="allBtnMobile" class="tab">Все</button>
+    </div>
+    
+    <div class="mobile-auth">
+        <input type="text" placeholder="Логин" class="auth-input-mobile">
+        <input type="password" placeholder="Пароль" class="auth-input-mobile">
+        <button class="auth-btn-mobile">Вход</button>
+    </div>
+
+    <nav class="mobile-nav" style="display: flex; flex-direction: column; gap: 15px; padding: 20px;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 20px;">Обзоры игр</a>
+        <a href="mods.html" style="color: white; text-decoration: none; font-size: 20px;">Моды</a>
+        <a href="guides.html" style="color: white; text-decoration: none; font-size: 20px;">Стратегии</a>
+    </nav>
+    <section id="newsContainerMobile"></section>
+</div>
+
+        <div class="container">
+            <!-- Левая панель (ПК) -->
+            <aside class="sidebar">
+                <div class="news-tabs">
+                    <button id="newBtn" class="tab active">Новые</button>
+                    <button id="allBtn" class="tab">Все</button>
+                </div>
+                <section id="newsContainer">
+                    <article class="sidebar-item">
+                        <div class="news-date">12.03.2026</div>
+                        <h3>Главным инвестором Highguard предположительно оказался холдинг Tencent</h3>
+                    </article>
+                    <article class="sidebar-item">
+                        <div class="news-date">11.03.2026</div>
+                        <h3>The Elder Scrolls 5: Skyrim получила долгожданные 60 fps на Nintendo Switch 2</h3>
+                    </article>
+                    <article class="sidebar-item">
+                        <div class="news-date">10.03.2026</div>
+                        <h3>Новым криптидом в Fallout 76 станет Бигфут — его добавят в 24 сезоне</h3>
+                    </article>
+                    <article class="sidebar-item">
+                        <div class="news-date">09.03.2026</div>
+                        <h3>Уютный выживач Outbound получил демо и геймплейный трейлер</h3>
+                    </article>
+                    <article class="sidebar-item">
+                        <div class="news-date">08.03.2026</div>
+                        <h3>«Кошачий» рогалик Mewgenics продался тиражом в миллион копий</h3>
+                    </article>
+                    <article class="sidebar-item">
+                        <div class="news-date">07.03.2026</div>
+                        <h3>Шутер Marathon получил свежий геймплейный трейлер</h3>
+                    </article>
+                </section>
+            </aside>
+
+            <!-- Основная часть -->
+            <main class="main-content">
+                <div class="left-column">
+                    <a href="reanimal_review.html" class="main-article-link">
+                        <article class="main-article">
+                            <img src="images/main_article.png" alt="Рецензия на ReAnimal">
+                            <h2 class="article-title">Рецензия на новую игру</h2>
+                        </article>
+                    </a>
+
+                    <section class="bottom-cards">
+                        <article class="card">
+                            <h3>Avowed получила крупное обновление и порт на PS5</h3>
+                            <div class="card-title">Игровые новости</div>
+                        </article>
+                        <article class="card">
+                            <h3>Mewgenics продался тиражом в миллион копий</h3>
+                            <div class="card-title">Игровые новости</div>
+                        </article>
+                    </section>
+                </div>
+
+                <div class="right-column">
+                    <article class="top-card">
+                        <img src="images/witcher3.png" alt="Ведьмак 3">
+                        <h2>«Ведьмак 3» скоро войдёт в Xbox Game Pass</h2>
+                        <div class="card-title">Игровые новости</div>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

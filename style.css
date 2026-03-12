@@ -1,0 +1,646 @@
+/* Стили для логотипа */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 90px;
+    width: auto;  /* Пропорции сохранятся автоматически */
+    display: block;
+    transition: transform 0.3s ease; /* Мягкий эффект при наведении */
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Убираем лишние отступы у h1, если решил его оставить */
+.logo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Плавный переход страницы ===== */
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Контейнер ===== */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #141515;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* ===== Общие стили ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("images/background_blur.jpg");
+    background-color: #1b1d1c;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #181919;
+    color: #ffffff;
+    border-bottom: 1px solid #363938;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #b8c7ce;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    color: white;
+    background: #232626;
+}
+
+.nav a.active {
+    color: white;
+    background: #2a2e2c;
+    border-bottom: 2px solid #c1cec9;
+}
+
+/* ===== Контент ===== */
+.container {
+    display: flex;
+    flex: 1;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+/* ===== Левая панель ===== */
+.sidebar {
+    width: 20%;
+    background-color: #1b1d1c;
+    padding: 20px;
+    border-right: 1px solid #171918;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопки "Новые / Все" */
+.news-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #363938;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background-color: #1f2120;
+    color: #c1cec9;
+    border: none;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #141515;
+    border-bottom: 2px solid #c1cec9;
+}
+
+/* Новости в левой панели */
+.sidebar-item {
+    background-color: #1f2120;
+    padding: 15px;
+    margin-bottom: 12px;
+    color: #c1cec9;
+    border: 1px solid #171918;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.news-date {
+    font-size: 12px;
+    color: #8f9b96;
+    margin-bottom: 6px;
+}
+
+/* Центральная часть */
+.main-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Левая колонка */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Правая колонка */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Главная статья */
+.main-article {
+    background-color: #1f2120;
+    border: 1px solid #0d151a;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-article img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.article-title {
+    color: #a0a7a3;
+    font-weight: normal;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.main-article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Нижние карточки */
+.bottom-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bottom-cards .card {
+    width: 300px;
+    background-color: #1f2120;
+    border: 1px solid #171918;
+    border-radius: 6px;
+    padding: 10px;
+    color: #c1cec9;
+}
+
+.bottom-cards .card-title {
+    color: #a0a7a3;
+    font-weight: normal;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Правая карточка */
+.top-card {
+    width: 300px;
+    background-color: #1f2120;
+    border: 1px solid #171918;
+    border-radius: 6px;
+    padding: 10px;
+    color: #c1cec9;
+}
+
+.top-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+.top-card .card-title {
+    color: #a0a7a3;
+    font-weight: normal;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ReAnimal ссылка */
+.main-article-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-article-link:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.main-article-link .article-title {
+    color: #a0a7a3;
+}
+
+.main-article-link:hover .article-title {
+    color: #ffffff;
+}
+
+/* Мобильное меню */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobile-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b1d1c;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.close-mobile-sidebar {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
+}
+
+/* Мобильный адаптив */
+@media (max-width: 768px) {
+    .wrapper { width: 100%; }
+    .container { flex-direction: column; gap: 0; padding: 10px; }
+    .sidebar { display: none; width: 100%; border-right: none; }
+    .main-content { flex-direction: column; gap: 20px; }
+    .main-article, .bottom-cards .card, .top-card { width: 100%; padding: 8px; }
+    .sidebar-item { padding: 10px; font-size: 14px; }
+    .article-title { font-size: 13px; }
+    .bottom-cards .card-title, .top-card .card-title { font-size: 12px; }
+    .menu-toggle { display: block; }
+}
+
+
+/* Мобильное меню */
+.mobile-sidebar {
+    display: none;
+    position: fixed; /* уже есть */
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b1d1c;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.close-mobile-sidebar {
+    position: absolute; /* фиксируем относительно мобильного меню */
+    top: 20px;          /* отступ сверху */
+    right: 20px;        /* отступ справа */
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1010;      /* чтобы была поверх всего */
+}
+
+/* Мобильный гамбургер */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar { display: none; }
+}
+
+/* Мобильные табы */
+.mobile-sidebar .news-tabs {
+    display: flex;
+    justify-content: space-between; /* кнопки растягиваются с крестиком между */
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #363938;
+    gap: 5px;
+}
+
+/* Крестик между кнопками */
+.close-mobile-sidebar {
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.close-mobile-sidebar:hover {
+    background: #232626;
+}
+
+/* 1. Убираем причину горизонтальной прокрутки */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Запрещает листать вправо */
+}
+
+.wrapper {
+    width: 100%; /* Вместо 1200px */
+    max-width: 1200px; /* Ограничиваем на ПК */
+    margin: 0 auto;
+    background-color: #141515;
+    min-height: 100vh;
+}
+
+
+/* 3. Адаптивность (для мобильных устройств) */
+@media (max-width: 768px) {
+    /* Скрываем обычную навигацию, чтобы не накладывалась */
+    .nav {
+        display: none !important; 
+    }
+
+    /* Показываем кнопку бургера */
+    .menu-toggle {
+        display: block !important;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    /* Уменьшаем логотип, чтобы хватило места */
+    .logo-img {
+        height: 60px;
+    }
+
+    /* Исправляем контейнеры, чтобы не вылезали за края */
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; /* Важно, чтобы padding не расширял блок */
+    }
+
+    .main-content, .left-column, .right-column {
+        width: 100% !important;
+        gap: 20px;
+    }
+}
+
+.mobile-sidebar {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b1d1c;
+    z-index: 9999; /* Самый высокий слой */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.mobile-nav a {
+    padding: 10px;
+    border-bottom: 1px solid #363938;
+}
+
+/* Полное устранение горизонтального скролла */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Обрезает всё, что вылазит справа */
+    position: relative;
+}
+
+* {
+    box-sizing: border-box; /* Чтобы padding не раздувал блоки */
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Если картинки или карточки имеют фиксированную ширину, сбрасываем */
+    img, .main-article, .card, .top-card {
+        max-width: 100%; 
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+/* Выравнивание элементов в хедере */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Стили формы регистрации/входа */
+.header-center {
+    flex: 1; /* Занимает доступное пространство в центре */
+    display: flex;
+    justify-content: center;
+}
+
+.auth-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 15px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+}
+
+.auth-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 5px;
+    font-size: 13px;
+    width: 100px;
+    outline: none;
+}
+
+.auth-input::placeholder {
+    color: #666;
+}
+
+.auth-btn {
+    background: #2a2e2c;
+    color: white;
+    border: 1px solid var(--border-color);
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #363938;
+    box-shadow: 0 0 10px rgba(193, 206, 201, 0.2);
+}
+
+.reg-link {
+    font-size: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.reg-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Скрываем форму на мобилках, чтобы не загромождать */
+@media (max-width: 1024px) {
+    .header-center {
+        display: none;
+    }
+}
+
+/* Стили для мобильной версии формы */
+.mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.auth-input-mobile {
+    background: #2a2e2c;
+    border: 1px solid #363938;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.auth-btn-mobile {
+    background: #363938;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* На всякий случай убедимся, что форма в десктопном хедере скрыта на малых экранах */
+@media (max-width: 900px) {
+    .header-center {
+        display: none !important;
+    }
+}
+
+/* Адаптация формы входа */
+@media (max-width: 1024px) {
+    .header-center { display: none !important; }
+}
+
+.mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #363938;
+}
+
+.mobile-auth .auth-input {
+    width: 100%;
+    padding: 10px;
+    background: #1f2120;
+    border: 1px solid #363938;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.mobile-auth .auth-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2a2e2c;
+    color: white;
+    border: 1px solid #363938;
+    border-radius: 5px;
+    cursor: pointer;
+}

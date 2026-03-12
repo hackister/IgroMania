@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReAnimal — Обзор игры</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили специально для оформления статьи внутри контента */
+        .review-container {
+            background: #181919;
+            padding: 30px;
+            border-radius: 12px;
+            color: #d0d6d2;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+        .review-image { width: 100%; border-radius: 10px; margin-bottom: 30px; }
+        .review-section { margin-bottom: 30px; }
+        .review-section h2 { color: #fff; border-left: 4px solid #c1cec9; padding-left: 15px; margin-bottom: 15px; }
+        .highlight { background: #232626; padding: 20px; border-radius: 8px; font-style: italic; border-left: 4px solid #8f9b96; margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header-left"><a href="index.html" class="logo-link"><img src="images/logo.png" alt="ИгроМания" class="logo-img"></a></div>
+        <div class="header-center">
+            <div class="auth-box"><input type="text" placeholder="Логин" class="auth-input"><input type="password" placeholder="Пароль" class="auth-input"><button class="auth-btn">Вход</button><a href="#" class="reg-link">Регистрация</a></div>
+        </div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Обзоры игр</a>
+                <a href="mods.html" class="nav-link">Моды</a>
+                <a href="guides.html" class="nav-link">Стратегии</a>
+            </nav>
+            <button class="menu-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <div class="mobile-sidebar" style="display: none;">
+        <div class="news-tabs"><button id="newBtnMobile" class="tab active">Новые</button><button class="close-mobile-sidebar">&#10005;</button><button id="allBtnMobile" class="tab">Все</button></div>
+        <div class="mobile-auth"><input type="text" placeholder="Логин" class="auth-input"><input type="password" placeholder="Пароль" class="auth-input"><button class="auth-btn">Вход</button></div>
+        <nav class="mobile-nav" style="display: flex; flex-direction: column; gap: 15px; padding: 20px;"><a href="index.html" style="color: white; text-decoration: none; font-size: 20px;">Обзоры игр</a><a href="mods.html" style="color: white; text-decoration: none; font-size: 20px;">Моды</a><a href="guides.html" style="color: white; text-decoration: none; font-size: 20px;">Стратегии</a></nav>
+        <section id="newsContainerMobile"></section>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar"><div class="news-tabs"><button id="newBtn" class="tab active">Новые</button><button id="allBtn" class="tab">Все</button></div><section id="newsContainer"></section></aside>
+        
+        <main class="main-content">
+            <div class="review-container">
+                <h1>Обзор ReAnimal: Наследие кошмаров</h1>
+                <img src="images/main_article.png" alt="Re_Animal обзор" class="review-image">
+                
+                <div class="review-section">
+                    <p><strong>ReAnimal</strong> — это амбициозный хоррор от создателей Little Nightmares. Студия Tarsier Studios возвращается к знакомому стилю, но с новым уровнем глубины и кооперативом.</p>
+                </div>
+
+                <div class="highlight">
+                    «Мы создали мир, где страх — это не только картинка, но и способ взаимодействия с напарником», — делятся разработчики.
+                </div>
+
+                <div class="review-section">
+                    <h2>Атмосфера и Геймплей</h2>
+                    <p>Игра повествует о брате и сестре, пытающихся выбраться с острова, захваченного темными силами. Вас ждут сюрреалистичные головоломки, напряженные моменты пряток от монстров и уникальная механика взаимодействия персонажей.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
